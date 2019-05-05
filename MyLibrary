@@ -8,23 +8,20 @@ package interface;
  *
  */
 public class MyLibrary {
-
     public static void main(String[] args) {
 
         int NumberOfBooks = 5;
-
-//        Book Book1= new Book("Xavier lee" , "Cars 6");
-//        Book Book2= new Book("George Orwell" , "Animal farm");
-//        Book Book3= new Book("tom right" , "Xavion dream");
-//        Book Book4= new Book("Xuan smith" , "Xuan smith autobiography");
-//        Book Book5= new Book("jhon smith" , "tomy live");        
-        
-        Book [] ArrayofBooks = new Book[NumberOfBooks]; 
+        Book [] ArrayofBooks = new Book[NumberOfBooks];
+        ArrayofBooks [0] = new Book("Xavier lee" , "Cars 6");
+        ArrayofBooks [1] = new Book("George Orwell" , "Animal farm");
+        ArrayofBooks [2] = new Book("tom right" , "Xavion dream");
+        ArrayofBooks [3] = new Book("Xuan smith" , "Xuan smith autobiography");
+        ArrayofBooks [4] = new Book("jhon smith" , "tomy live");
         for (int i = 0; i < NumberOfBooks; i++) {
-            Book Books = new Book("Xavier lee" , "Cars 6");
-            ArrayofBooks[i] = Books;
+            
             ArrayofBooks[i].getAuthor();
             ArrayofBooks[i].getTitle();
+            
             
         }
         for (int i = 0; i < NumberOfBooks; i++) {
