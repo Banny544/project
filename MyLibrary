@@ -12,24 +12,28 @@ public class MyLibrary {
     public static void main(String[] args) {
 
         int NumberOfBooks = 5;
+//creates the array called "ArrayofBooks".--------------------------------------
+        Book[] ArrayofBooks = new Book[NumberOfBooks];
         
-        Book [] ArrayofBooks = new Book[NumberOfBooks];
-        ArrayofBooks [0] = new Book("Xavier lee" , "Cars 6");
-        ArrayofBooks [1] = new Book("George Orwell" , "Animal farm");
-        ArrayofBooks [2] = new Book("tom right" , "Xavion dream");
-        ArrayofBooks [3] = new Book("Xuan smith" , "Xuan smith autobiography");
-        ArrayofBooks [4] = new Book("jhon smith" , "tomy live");
-        
-        for (int i = 0; i < NumberOfBooks ; i++) {
-            System.out.println( ArrayofBooks[i].getAuthor()); 
+//filling the array with the names of authors and titles of their books.--------
+        ArrayofBooks[0] = new Book("Xavier lee", "Cars 6");
+        ArrayofBooks[1] = new Book("George Orwell", "Animal farm");
+        ArrayofBooks[2] = new Book("tom right", "Xavion dream");
+        ArrayofBooks[3] = new Book("Xuan smith", "Xuan smith autobiography");
+        ArrayofBooks[4] = new Book("jhon smith", "tomy live");
+
+// a loop to get and print each book detail using the getters.------------------        
+        for (int i = 0; i < NumberOfBooks; i++) {
+            // gets the authors name from index number(i).
+            System.out.print(ArrayofBooks[i].getAuthor() + " ");
+            // gets the Title from index number(i).
             System.out.println(ArrayofBooks[i].getTitle());
-            
- 
         }
+        
+//prints each book using the displayBookDetails method.-------------------------
         for (int i = 0; i < NumberOfBooks; i++) {
             ArrayofBooks[i].displayBookDetails();
         }
-
 
     }
 }
